@@ -1,5 +1,6 @@
 #include "Timer.h"
 #include <stdlib.h>
+
 static inline size_t parent_index(size_t i) { return (i - 1) / 2; };
 static inline size_t left_child_index(size_t i) { return 2 * i + 1; };
 static inline size_t right_child_index(size_t i) { return 2 * i + 2; };
@@ -16,7 +17,6 @@ priorityQueue_t *PQ_Create(size_t int_cap)
         return NULL;
     }
     queue->capacity = int_cap;
-https: // github.com/SXsid/C-Loop.git
     queue->size = 0;
     return queue;
 }
